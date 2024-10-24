@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="8dp">
+
+    <!-- ScrollView untuk mengizinkan konten digulir -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:fillViewport="true">
+
+        <!-- Konten yang dapat di-scroll -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- RecyclerView untuk menampilkan data absensi -->
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="8dp" />
+        </LinearLayout>
+    </ScrollView>
+
+    <!-- Navbar di bawah -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp">
+
+        <!-- Menggunakan LinearLayout horizontal untuk tombol-tombol -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center">
+
+            <!-- Tombol History -->
+            <ImageView
+                android:id="@+id/historyIcon"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:contentDescription="History Icon"
+                android:src="@drawable/ic_history" />
+
+            <!-- Tombol Home (berat ditambahkan untuk menempatkan di tengah) -->
+            <ImageView
+                android:id="@+id/homeIcon"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:layout_weight="1"
+                android:contentDescription="Home Icon"
+                android:src="@drawable/ic_home" />
+
+            <!-- Tombol Profil -->
+            <ImageView
+                android:id="@+id/profileIcon"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:contentDescription="Profile Icon"
+                android:src="@drawable/ic_profile" />
+        </LinearLayout>
+    </RelativeLayout>
+</LinearLayout>
